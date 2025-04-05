@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <link rel="shortcut icon" href="./img//аватарка для сайта путешествий супер упрощенном дизайнерском стиле.png" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Путешествие Мечты</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        body {
+            margin-top: 0;
+            background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 5rem 2rem 2rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem;
+            background: white;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+            animation: fadeIn 1.5s;
+        }
+
+        nav a {
+            color: #764ba2;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff7e5f;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 4rem 2rem;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 15px;
+            margin-bottom: 1rem;
+        }
+
+        .card h2 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #764ba2;
+        }
+
+        .card p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #764ba2;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff7e5f;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: background 0.3s;
+            margin-top: 1rem;
+        }
+
+        .btn:hover {
+            background: #feb47b;
+        }
+
+        .contact {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: #f7f7f7;
+        }
+
+        .contact h2 {
+            color: #764ba2;
+            margin-bottom: 1rem;
+        }
+
+        .contact p {
+            color: #555;
+        }
+
+        .contact a {
+            color: #764ba2;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact a:hover {
+            color: #ff7e5f;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 120px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="seasons">
+        <h1><i class="fas fa-globe-europe"></i> Путешествие Мечты</h1>
+        <p>Лучшие направления, вдохновение и советы — всё в одном месте</p>
+        <a href="#contact" class="btn">Связаться с нами</a>
+    </header>
+
+    <nav>
+        <a href="#seasons">По сезонам</a>
+        <a href="#facts">Факты</a>
+        <a href="#styles">По стилю</a>
+        <a href="#ideas">Идеи</a>
+        <a href="#relax">Релакс</a>
+        <a href="#contact">Контакты</a>
+    </nav>
+
+    <section class="section">
+        <h2>🌸 Сезонные путешествия</h2>
+        <div class="grid">
+            <div class="card">
+                <h2>Весна</h2>
+                <p>Париж, Киото, Амстердам — цветение, уют и романтика в каждом шаге.</p>
+            </div>
+            <div class="card">
+                <h2>Лето</h2>
+                <p>Греция, Хорватия, Бали — море, солнце, лазурные пляжи и вечера на террасе.</p>
+            </div>
+            <div class="card">
+                <h2>Осень</h2>
+                <p>Канада, Бавария, Южная Корея — буйство красок и уют осенних прогулок.</p>
+            </div>
+            <div class="card">
+                <h2>Зима</h2>
+                <p>Финляндия, Швейцария, Австрия — лыжи, снежные сказки и горячий шоколад.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="styles">
+        <h2>✨ Стили путешествий</h2>
+        <div class="grid">
+            <div class="card">
+                <h2>Приключения</h2>
+                <p>Норвегия, Перу, Исландия — горы, треккинг, вулканы и захватывающие дух пейзажи.</p>
+            </div>
+            <div class="card">
+                <h2>Городская атмосфера</h2>
+                <p>Барселона, Токио, Нью-Йорк — искусство, шопинг, гастрономия и ночная жизнь.</p>
+            </div>
+            <div class="card">
+                <h2>Романтика</h2>
+                <p>Венеция, Санторини, Прага — закаты, мосты, свечи и прогулки вдвоём.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="ideas">
+        <h2>🧳 Идеи для вдохновения</h2>
+        <div class="grid">
+            <div class="card">
+                <h2>Соло-путешествие</h2>
+                <p>Лиссабон, Бали, Стамбул — идеально для новых знакомств и самопознания.</p>
+            </div>
+            <div class="card">
+                <h2>С семьёй</h2>
+                <p>Сафари в Кении, Лапландия, парки США — лучшие воспоминания для детей и взрослых.</p>
+            </div>
+            <div class="card">
+                <h2>Digital-номады</h2>
+                <p>Португалия, Таиланд, Грузия — комфортные города с хорошим интернетом и атмосферой свободы.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="relax">
+        <h2>🧘 Полный релакс</h2>
+        <div class="grid">
+            <div class="card">
+                <h2>Острова</h2>
+                <p>Мальдивы, Сейшелы, Занзибар — песок, пальмы и абсолютный покой.</p>
+            </div>
+            <div class="card">
+                <h2>СПА и ретриты</h2>
+                <p>Индия, Коста-Рика, Австрия — йога, медитации и восстановление баланса тела и духа.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="countries">
+        <h2>Популярные направления</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://th.bing.com/th/id/OIP.lER_rmlxhpK-8l64OoQXIwHaFA?rs=1&pid=ImgDetMain" alt="Париж">
+                <h2>Франция</h2>
+                <p>Эйфелева башня, круассаны и романтика на каждом шагу.</p>
+            </div>
+            <div class="card">
+                <img src="https://gidnabali.ru/user_files/page_texts/hram_voda.jpg" alt="Бали">
+                <h2>Индонезия</h2>
+                <p>Тропический рай с рисовыми террасами и океаном.</p>
+            </div>
+            <div class="card">
+                <img src="https://t2.uc.ltmcdn.com/es/posts/5/0/7/cual_es_el_pais_mas_seguro_del_mundo_49705_orig.jpg"
+                    alt="Исландия">
+                <h2>Исландия</h2>
+                <p>Северное сияние, вулканы и ледники — мечта исследователя.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="facts">
+        <h2>Интересные факты о путешествиях</h2>
+        <ul>
+            <li>🌎 Самая посещаемая страна мира — Франция.</li>
+            <li>🗺️ Путешествия увеличивают креативность и продуктивность.</li>
+            <li>✈️ Самое короткое авиапутешествие длится всего 57 секунд.</li>
+            <li>🏝️ Более 80% туристов предпочитают отдых у воды.</li>
+        </ul>
+    </section>
+
+    <section class="section" id="plan">
+        <h2>Создай идеальный маршрут</h2>
+        <p>Ответь на пару вопросов, и мы подскажем тебе лучший вариант отдыха!</p>
+        <a href="./planing.html" class="btn">Запланировать отдых</a>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2><i class="fas fa-envelope"></i> Связаться с нами</h2>
+        <p>Пишите на email: <a href="mailto:denispahomov01@gmail.com">denispahomov01@gmail.com</a></p>
+        <p>Или в соцсетях:
+            <br>
+            <a href="https://t.me/DetroidConnor"><i class="fab fa-telegram"></i></a> |
+            <a href="https://x.com/connnor3D"><i class="fa-brands fa-x-twitter"></i></a>
+        </p>
+    </section>
+
+    <footer>
+        © 2025 Путешествие Мечты. Найди своё идеальное место уже сегодня.
+    </footer>
+</body>
+
+</html>

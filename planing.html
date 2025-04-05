@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Путешествие Мечты</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        body {
+            margin-top: 0;
+            background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 5rem 2rem 2rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            animation: fadeInDown 1s ease-in-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem;
+            background: white;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+            animation: fadeIn 1.5s;
+        }
+
+        nav a {
+            color: #764ba2;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff7e5f;
+        }
+
+        .section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 4rem 2rem;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .plan-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .plan-form input,
+        .plan-form select,
+        .plan-form button {
+            padding: 1rem;
+            font-size: 1rem;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            transition: all 0.3s ease;
+        }
+
+        .plan-form input:focus,
+        .plan-form select:focus,
+        .plan-form button:hover {
+            border-color: #ff7e5f;
+            outline: none;
+        }
+
+        .plan-result {
+            margin-top: 2rem;
+            background-color: #f7f7f7;
+            padding: 1rem;
+            border-radius: 10px;
+            display: none;
+            position: relative;
+        }
+
+        .plan-result .fa-paperclip {
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            font-size: 2rem;
+            color: #ff7e5f;
+        }
+
+        .contact {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: #f7f7f7;
+        }
+
+        .contact h2 {
+            color: #764ba2;
+            margin-bottom: 1rem;
+        }
+
+        .contact p {
+            color: #555;
+        }
+
+        .contact a {
+            color: #764ba2;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact a:hover {
+            color: #ff7e5f;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #764ba2;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 120px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1><i class="fas fa-globe-europe"></i> Путешествие Мечты</h1>
+        <p>Лучшие направления, вдохновение и советы — всё в одном месте</p>
+    </header>
+
+    <nav id="plan">
+        <a href="#plan">Идеальный отдых</a>
+        <a href="#contact">Контакты</a>
+    </nav>
+
+    <section class="section">
+        <h2>Запланировать поездку</h2>
+        <p>Введите страну и выберите тип путешествия. Мы поможем вам организовать отпуск!</p>
+        <form class="plan-form" id="planForm">
+            <label for="destination">Страна</label>
+            <input type="text" id="destination" name="destination" placeholder="Введите страну" required>
+
+            <label for="travel-type">Тип путешествия</label>
+            <select id="travel-type" name="travel-type" required>
+                <option value="adventure">Приключения</option>
+                <option value="relaxation">Релакс</option>
+                <option value="family">Семейное</option>
+            </select>
+
+            <label for="dates">Даты поездки</label>
+            <input type="date" id="dates" name="dates" required />
+
+            <button type="submit" class="btn">Запланировать поездку</button>
+        </form>
+
+        <div class="plan-result" id="planResult">
+            <i class="fas fa-paperclip"></i>
+            <h3>Ваши данные:</h3>
+            <p id="resultDestination"></p>
+            <p id="resultTravelType"></p>
+            <p id="resultDates"></p>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2><i class="fas fa-envelope"></i> Связаться с нами</h2>
+        <p>Пишите на email: <a href="mailto:denispahomov01@gmail.com">denispahomov01@gmail.com</a></p>
+        <p>Или в соцсетях:
+            <br>
+            <a href="https://t.me/DetroidConnor"><i class="fab fa-telegram"></i></a> |
+            <a href="https://x.com/connnor3D"><i class="fa-brands fa-x-twitter"></i></a>
+        </p>
+    </section>
+
+    <footer>
+        © 2025 Путешествие Мечты. Найди своё идеальное место уже сегодня.
+    </footer>
+
+    <script>
+        document.getElementById('planForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const destination = document.getElementById('destination').value;
+            const travelType = document.getElementById('travel-type').value;
+            const dates = document.getElementById('dates').value;
+
+            document.getElementById('resultDestination').textContent = `Страна: ${destination}`;
+            document.getElementById('resultTravelType').textContent = `Тип путешествия: ${travelType}`;
+            document.getElementById('resultDates').textContent = `Даты поездки: ${dates}`;
+
+            document.getElementById('planResult').style.display = 'block';
+        });
+    </script>
+</body>
+
+</html>
